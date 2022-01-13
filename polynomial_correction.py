@@ -105,20 +105,19 @@ class Poly2:
     def draw(self, x_points=None):
         """ Méthode qui trace la courbe, voir fichier png."""
         
-        x_points = list(range(0,20,2))  # absicces
-        y = list(self.__val(k) for k in x_points) # ordonnées 
+        x_points = list(range(0,20,2)) 
+        y = list(self.__val(k) for k in x_points)
 
 
-        axes = plt.gca() # création des axes
-        axes.grid(True) # ajout de la grille en fond 
-        axes.set_xlabel('Abscisses') # écriture des noms au niveau des l'absicce
-        axes.set_ylabel('Ordonnées') # écriture des noms au niveau de l'ordonnée
+        axes = plt.gca()
+        axes.grid(True)
+        axes.set_xlabel('Abscisses') 
+        axes.set_ylabel('Ordonnées') 
 
-        plt.scatter(x_points,y,marker = "x",color = "green") # tracé
+        plt.scatter(x_points,y,marker = "x",color = "green")
         
         plt.title(self.__str__())
-        plt.show() # affichage de l'image
-
+        plt.show() 
 
         pass
 
